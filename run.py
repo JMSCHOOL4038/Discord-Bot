@@ -55,7 +55,7 @@ async def on_message(message):
         await message.delete()
      await bot.process_commands(message)
 
-client.event
+@client.event
 async def on_message(message):
     message_content = message.content
     bad = message_content.find("년")
