@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -24,6 +25,9 @@ async def on_message(message):
         await message.delete()
     await bot.process_commands(message)
 
-client.run('Nzg4MjExODIwMzA0MjY5MzQz.X9gNdg.uuPLVcHlT-aXvMWXaomFS2jZqbU')
+
+
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
